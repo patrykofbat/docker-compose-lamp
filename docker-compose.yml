@@ -11,6 +11,7 @@ services:
       - "443:443"
     links: 
       - mysql
+      - mailcatcher
     volumes: 
       - ${DOCUMENT_ROOT-./www}:/var/www/html
       - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/php.ini
@@ -43,3 +44,10 @@ services:
       - '8080:80'
     volumes: 
       - /sessions
+  mailcatcher:
+    image: tophfr/mailcatcher
+    container_name: 'png-mailcatcher'
+    restart: 'always'
+    ports:
+      - '1080:80'
+      - '1025:25'

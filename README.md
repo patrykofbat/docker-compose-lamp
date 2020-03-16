@@ -4,26 +4,42 @@
 
 This is a basic LAMP stack environment built using Docker Compose. It consists following:
 
+<<<<<<< HEAD
 * PHP 5.6
 * Apache 2.4
 * MySQL 5.7
+=======
+* PHP
+* Apache
+* MySQL
+>>>>>>> master
 * phpMyAdmin
+
+As of now, we have 3 different branches for different PHP versions. Use appropriate branch as per your php version need:
+* [5.6.x](https://github.com/sprintcube/docker-compose-lamp/tree/5.6.x)
+* [7.1.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.1.x)
+* [7.2.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.2.x)
 
 ## Installation
 
-Clone this repository on your local computer. Run the `docker-compose up -d`.
+Clone this repository on your local computer and checkout the appropriate branch e.g. 7.1.x. Run the `docker-compose up -d`.
 
 ```shell
 git clone https://github.com/sprintcube/docker-compose-lamp.git
 cd docker-compose-lamp/
 git fetch --all
+<<<<<<< HEAD
 git checkout 5.6.x
+=======
+git checkout 7.1.x
+>>>>>>> master
 docker-compose up -d
 ```
 > Please make sure that you are using `5.6.x` branch.
 
 Your LAMP stack is now ready!! You can access it via `http://localhost`.
 
+<<<<<<< HEAD
 ## Configuration
 
 This package comes with default configuration options. You can modify them by creating `.env` file in your root directory.
@@ -110,5 +126,8 @@ username: root
 password: tiger
 
 ## Redis
+=======
+## Configuration and Usage
+>>>>>>> master
 
-It comes with Redis. It runs on default port `6379`.
+Please read from appropriate version branch.
